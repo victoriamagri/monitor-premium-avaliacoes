@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PDA Franquias Premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#0055FF;--navy:#080E32;--coral:#FC6058;--fundo:#F5F7FB;--card:#fff;--borda:#E3E7F0;--texto:#1B2140;--sut:#5B6380;
+--verde:#1a7f37;--verde-bg:#E6F4EA;--amar:#9a6700;--amar-bg:#FFF4D6;--verm:#C4314B;--verm-bg:#FDE8EA;--azul-bg:#E8F0FF}
+*{box-sizing:border-box}html{color-scheme:light}
+body{margin:0;background:var(--fundo);color:var(--texto);font:15px/1.55 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+header{background:var(--navy);color:#fff;padding:28px 16px 22px}
+.w{max-width:1240px;margin:0 auto;padding:0 16px}header .w{padding:0}
+h1{margin:0 0 6px;font-size:26px}header p{margin:0;color:#C9D2F2;font-size:14px}header a{color:#fff}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--borda)}
+nav .w{display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav a{white-space:nowrap;padding:12px 10px;color:var(--sut);text-decoration:none;font-size:14px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--azul);border-color:var(--azul)}
+section{margin:28px 0}h2{font-size:20px;margin:0 0 6px;color:var(--navy)}.lead{color:var(--sut);margin:0 0 14px;max-width:900px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:16px}.big{font-size:28px;font-weight:700;color:var(--navy)}.lbl{color:var(--sut);font-size:13px}
+ol.passos{counter-reset:p;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ol.passos li{background:#fff;border:1px solid var(--borda);border-radius:12px;padding:14px 16px 14px 56px;position:relative}
+ol.passos li:before{counter-increment:p;content:counter(p);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--azul);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+ol.passos b{color:var(--navy)}
+.tab{overflow-x:auto;background:#fff;border:1px solid var(--borda);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:9px 12px;border-bottom:1px solid var(--borda);text-align:left;vertical-align:top}
+th{background:#FAFBFD;color:var(--sut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}td.n{text-align:right;white-space:nowrap}
+td a{color:var(--azul);text-decoration:none;font-weight:600}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.f-vol{background:var(--verde-bg);color:var(--verde)}.f-nota{background:var(--verm-bg);color:var(--verm)}.f-amb{background:var(--amar-bg);color:var(--amar)}
+.p1{background:var(--navy);color:#fff}.p2{background:var(--azul-bg);color:var(--azul)}.p3{background:#EEF0F5;color:var(--sut)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}.filtros button{border:1px solid var(--borda);background:#fff;border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer;color:var(--texto)}
+.filtros button.on{background:var(--azul);border-color:var(--azul);color:#fff}
+.fr{background:#fff;border:1px solid var(--borda);border-radius:14px;padding:18px;margin:0 0 16px;scroll-margin-top:60px}
+.cab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 12px}.cab h3{margin:0;font-size:18px;color:var(--navy)}.sub{color:var(--sut);font-size:13px}
+.tags{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin:0 0 8px}
+.t{background:var(--fundo);border-radius:10px;padding:10px 12px}.tl{font-size:12px;color:var(--sut)}.tv{font-size:20px;font-weight:700;color:var(--navy)}.ts{font-size:12px;color:var(--sut)}
+.mini{font-size:13px;color:var(--sut)}
+.swot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
+@media(max-width:700px){.swot{grid-template-columns:1fr}}
+.q{border-radius:10px;padding:10px 14px;border-left:4px solid}.q h4{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.04em}.q ul{margin:0;padding-left:18px;font-size:14px}
+.qf{background:var(--verde-bg);border-color:var(--verde)}.qf h4{color:var(--verde)}
+.qw{background:var(--verm-bg);border-color:var(--verm)}.qw h4{color:var(--verm)}
+.qo{background:var(--azul-bg);border-color:var(--azul)}.qo h4{color:var(--azul)}
+.qa{background:var(--amar-bg);border-color:var(--amar)}.qa h4{color:var(--amar)}
+details.msg{border:1px solid var(--borda);border-radius:10px;padding:10px 14px}details.msg summary{cursor:pointer;font-weight:600;color:var(--azul)}
+pre{white-space:pre-wrap;font:inherit;font-size:14px;background:var(--fundo);border-radius:8px;padding:12px;margin:10px 0}
+.cp{background:var(--azul);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.int{font-size:13px;color:var(--sut);font-style:italic;margin:0}
+.nota{background:#fff;border:1px solid var(--borda);border-left:4px solid var(--coral);border-radius:10px;padding:12px 16px;font-size:14px}
+footer{color:var(--sut);font-size:13px;padding:24px 0 40px}
+</style></head><body>
+<header><div class="w"><h1>PDA Franquias Premium · Plano de contato</h1>
+<p>Diagnóstico de cada franquia e mensagem para agendar a reunião sobre notas e pedidos de avaliação do Airbnb · dados de 11/11/2026 · <a href="./">abrir o monitor diário</a></p></div></header>
+<nav><div class="w"><a href="#rotina">Passo a passo</a><a href="#resumo">Resumo</a><a href="#franquias">Franquias</a><a href="#seazone">Franquia Seazone</a><a href="#regua">Como ler</a></div></nav>
+<main class="w">
+<section><div class="cards">
+<div class="card"><div class="big">4,78</div><div class="lbl">nota da Seazone no Airbnb desde 1º/10; meta de 4,82, com piso de 4,80</div></div>
+<div class="card"><div class="big">15</div><div class="lbl">franquias premium para contatar: 3 com foco em subir a nota, 5 em nota e avaliações e 7 em aumentar avaliações</div></div>
+<div class="card"><div class="big">11 de 15</div><div class="lbl">premium não pediram nenhuma avaliação nas saídas de 26/10 a 01/11 (a franquia tem 10 dias para pedir)</div></div>
+<div class="card"><div class="big">30%</div><div class="lbl">das saídas com pedido de avaliação: é o combinado que vamos propor a todas (limite do PDA, ainda a validar com a Rayanne)</div></div>
+</div></section>
+
+<section id="rotina"><h2>Passo a passo da rotina</h2>
+<p class="lead">Ordem de contato: primeiro as que estão abaixo do piso de 4,80, depois as que estão no limite da meta e por último as que já têm nota boa e só precisam de mais avaliações.</p>
+<ol class="passos">
+<li><b>Conferir o número do dia.</b> Antes de mandar, abrir o <a href="./">monitor</a> e ver se a nota e o pedido da franquia mudaram. Se mudou muito, ajustar a frase da mensagem.</li>
+<li><b>Enviar a mensagem.</b> Abrir o cartão da franquia, copiar a mensagem e enviar no canal de sempre com a pessoa franqueada. Começar pelas marcadas "Contato 1º" (Andreia, Wolnei, Silvia, Neli e Roberta).</li>
+<li><b>Agendar a reunião (30 min).</b> Quando ela responder, marcar a conversa. Sem resposta em 2 dias úteis, reenviar uma vez; sem resposta de novo, levar para a Rayanne.</li>
+<li><b>Na reunião, seguir a pauta:</b> (1) mostrar a matriz da franquia; (2) ouvir o que está difícil na operação (equipe, limpeza, manutenção, acesso aos imóveis, ferramenta); (3) mostrar o envio em massa do pedido de avaliação no Seazone Host, se ela não usa; (4) combinar uma meta: 30% das saídas com pedido toda semana e, para quem está abaixo de 4,80, as 2 ou 3 ações de nota da matriz; (5) definir quem da equipe fica responsável pelos pedidos.</li>
+<li><b>Registrar os combinados.</b> Anotar na hora o que ficou combinado, quem é o responsável e a data de retorno (o monitor ainda não tem lugar para isso).</li>
+<li><b>Acompanhar toda semana.</b> Às segundas, olhar no monitor o pedido de avaliação da semana e a nota de cada franquia contatada. Bateu os 30%? Mandar um elogio. Não bateu? Mandar uma mensagem curta lembrando o combinado.</li>
+<li><b>Fechar o ciclo em 30 dias.</b> Comparar a nota e o pedido de avaliação com os de hoje (os números desta página ficam como ponto de partida) e decidir com a Rayanne quem sai do acompanhamento.</li>
+</ol>
+<p class="nota"><b>Cuidado na conversa:</b> não citar para a franquia risco de suspensão, remoção ou banimento, porque é uma régua interna da Seazone. A conversa é sobre a nota da Seazone no Airbnb e como ela pode ajudar.</p>
+</section>
+
+<section id="resumo"><h2>Resumo das 15 franquias premium</h2>
+<p class="lead">Em ordem de contato. O foco vem do cenário: nota boa com poucas avaliações = aumentar avaliações; volume bom com nota abaixo da meta = subir a nota; as duas coisas = nota + avaliações.</p>
+<div class="tab"><table><thead><tr><th>Ordem</th><th>Franquia</th><th>Porte</th><th>Imóveis</th><th>Nota desde 1º/10</th><th>Avaliações</th><th>Pedido na semana</th><th>Foco</th></tr></thead><tbody><tr><td>1</td><td><a href="#h46">Andreia Real da Rosa</a><br><span class="mini">FLN-001-INGV</span></td><td>Grande</td><td class="n">65</td><td class="n">4,58</td><td class="n">88</td><td class="n">0%</td><td><span class="tag f-nota">Subir a nota</span></td></tr><tr><td>1</td><td><a href="#h84">Silvia Regina Costa Silva</a><br><span class="mini">FLN-005-JUR</span></td><td>Spot</td><td class="n">40</td><td class="n">4,73</td><td class="n">59</td><td class="n">0%</td><td><span class="tag f-amb">Nota + avaliações</span></td></tr><tr><td>1</td><td><a href="#h290">Neli Schuatz</a><br><span class="mini">BOM-003-BBS</span></td><td>Grande</td><td class="n">63</td><td class="n">4,75</td><td class="n">152</td><td class="n">0%</td><td><span class="tag f-amb">Nota + avaliações</span></td></tr><tr><td>1</td><td><a href="#h139">Wolnei Roberto Ramos</a><br><span class="mini">ITP-002-CEN</span></td><td>Grande</td><td class="n">72</td><td class="n">4,76</td><td class="n">217</td><td class="n">0%</td><td><span class="tag f-nota">Subir a nota</span></td></tr><tr><td>1</td><td><a href="#h165">Roberta de Freitas Costa</a><br><span class="mini">SSA-001-ITP</span></td><td>Grande</td><td class="n">86</td><td class="n">4,78</td><td class="n">195</td><td class="n">0%</td><td><span class="tag f-amb">Nota + avaliações</span></td></tr><tr><td>2</td><td><a href="#h99">Camila Moura Lacerda</a><br><span class="mini">MCZ-002-CDA</span></td><td>Master</td><td class="n">146</td><td class="n">4,80</td><td class="n">250</td><td class="n">0%</td><td><span class="tag f-amb">Nota + avaliações</span></td></tr><tr><td>2</td><td><a href="#h47">Katia Leite do Nascimento Emmel</a><br><span class="mini">ITP-001-JPM</span></td><td>Master</td><td class="n">123</td><td class="n">4,81</td><td class="n">216</td><td class="n">11%</td><td><span class="tag f-nota">Subir a nota</span></td></tr><tr><td>2</td><td><a href="#h75">Ana Paula Friedrich de Oliveira</a><br><span class="mini">PEN-001-CEN</span></td><td>Master</td><td class="n">170</td><td class="n">4,82</td><td class="n">368</td><td class="n">0%</td><td><span class="tag f-amb">Nota + avaliações</span></td></tr><tr><td>3</td><td><a href="#h214">Sônia Maria Gervásio Sales</a><br><span class="mini">FLN-004-CAM</span></td><td>Spot</td><td class="n">40</td><td class="n">4,84</td><td class="n">100</td><td class="n">0%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h123">Ana Lúcia Gasparello Cruz</a><br><span class="mini">CWB-001-CEN</span></td><td>Grande</td><td class="n">73</td><td class="n">4,85</td><td class="n">120</td><td class="n">20%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h251">Agatha de Assis Souza Gloria</a><br><span class="mini">GYN-002-SAG</span></td><td>Grande</td><td class="n">92</td><td class="n">4,86</td><td class="n">137</td><td class="n">3%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h22">Jeferson Luis Fernandes</a><br><span class="mini">GPB-001-PDO</span></td><td>Spot</td><td class="n">50</td><td class="n">4,89</td><td class="n">75</td><td class="n">0%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h32">Vistas Gestão Rural</a><br><span class="mini">ANT-001-VDA</span></td><td>Vistas</td><td class="n">44</td><td class="n">4,93</td><td class="n">44</td><td class="n">59%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h263">Jhenyffer Paola Ramos da Silva</a><br><span class="mini">URU-003-ABR</span></td><td>Spot</td><td class="n">38</td><td class="n">4,98</td><td class="n">50</td><td class="n">0%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr><tr><td>3</td><td><a href="#h309">Mariana de Godoy Umpierre</a><br><span class="mini">GPB-005-PDO</span></td><td>Spot</td><td class="n">10</td><td class="n">5,00</td><td class="n">5</td><td class="n">0%</td><td><span class="tag f-vol">Aumentar avaliações</span></td></tr></tbody></table></div>
+</section>
+
+<section id="franquias"><h2>Diagnóstico e mensagem por franquia</h2>
+<div class="filtros"><button class="on" data-f="todas">Todas</button><button data-f="nota">Subir a nota</button><button data-f="ambos">Nota + avaliações</button><button data-f="volume">Aumentar avaliações</button></div>
+<article id="h46" class="fr" data-foco="nota" data-grupo="premium">
+<div class="cab"><div><h3>Andreia Real da Rosa</h3><div class="sub">FLN-001-INGV · Grande · 65 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,58</div><div class="ts">88 avaliações · 77% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,66</div><div class="ts">64 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 33 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">52%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">—</div><div class="ts">nenhum pedido em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">3</div><div class="ts">acessos · 7 faxineiras · pede: ninguém</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,64 · comunicação 4,72 · check-in 4,76 · localização 4,70 · valor 4,62. Faltam cerca de <b>118</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>10</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>3 acessos ativos e 7 faxineiras cadastradas no Sapron</li><li>64 avaliações nos últimos 30 dias, com a nota do mês (4,66) já acima da do trimestre</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota mais baixa entre as premium: 4,58 desde 1º/10</li><li>Todas as subnotas abaixo de 4,80, principalmente valor (4,62) e limpeza (4,64)</li><li>Comentários sobre imóvel diferente das fotos, manutenção (armário, tomadas) e cheiro</li><li>Nenhum pedido de avaliação em 90 dias</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>A nota dos últimos 30 dias já é melhor: dá para consolidar essa melhora</li><li>Revisão rápida dos imóveis com comentário de &quot;diferente das fotos&quot; e de manutenção (SDP, STCY)</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>São necessárias mais de 100 avaliações 5 estrelas seguidas para chegar a 4,82, por isso o trabalho tem que começar já</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h46">Oi, Andreia! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota desde 1º de outubro está em 4,58 e todas as notas por categoria estão abaixo de 4,80. Nos comentários aparecem manutenção (armário, tomadas), cheiro e imóvel diferente das fotos. A boa notícia é que os últimos 30 dias já estão melhores (4,66).
+
+Onde vocês podem nos ajudar: fazer uma ronda de manutenção nos imóveis citados, conferir se as fotos ainda mostram o imóvel como ele está hoje e só depois começar a pedir avaliação.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h46">Copiar mensagem</button></details>
+</article><article id="h84" class="fr" data-foco="ambos" data-grupo="premium">
+<div class="cab"><div><h3>Silvia Regina Costa Silva</h3><div class="sub">FLN-005-JUR · Spot · Jurerê Spot, Spot 215 · 40 imóveis</div></div>
+<div class="tags"><span class="tag f-amb">Nota + avaliações</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,73</div><div class="ts">59 avaliações · 85% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,67</div><div class="ts">45 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 53 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">47%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">17%</div><div class="ts">dos 24 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">2</div><div class="ts">acessos · 5 faxineiras · pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,85 · comunicação 4,83 · check-in 4,80 · localização 4,88 · valor 4,69. Faltam cerca de <b>30</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>16</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Limpeza bem avaliada (4,85)</li><li>Já usou o pedido de avaliação: 24 pedidos em 90 dias e 9% das saídas em setembro</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,73 desde 1º/10, abaixo do piso; nos últimos 30 dias caiu para 4,67</li><li>Valor (4,69) é a subnota mais baixa</li><li>Manutenção aparece nos comentários (TV, conforto e móveis da casa)</li><li>Pedidos zerados na última semana (0 de 53 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Prédios Spot (Jurerê Spot e Spot 215) têm padrão alto de hóspede: resolver manutenção pequena muda a nota rápido</li><li>Retomar os pedidos que já foram feitos em setembro</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>A nota está caindo nos últimos 30 dias; são cerca de 30 avaliações 5 estrelas para chegar a 4,82</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h84">Oi, Silvia! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota desde 1º de outubro está em 4,73 e nos últimos 30 dias caiu para 4,67. Os comentários falam principalmente de manutenção (TV, móveis e conforto) e a categoria &quot;valor&quot; é a mais baixa. Os pedidos de avaliação, que vocês já faziam em setembro, pararam na última semana.
+
+Onde vocês podem nos ajudar: revisar a manutenção dos imóveis citados (TV, móveis e conforto) e retomar os pedidos de avaliação toda semana.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h84">Copiar mensagem</button></details>
+</article><article id="h290" class="fr" data-foco="ambos" data-grupo="premium">
+<div class="cab"><div><h3>Neli Schuatz</h3><div class="sub">BOM-003-BBS · Grande · 63 imóveis</div></div>
+<div class="tags"><span class="tag f-amb">Nota + avaliações</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,75</div><div class="ts">152 avaliações · 83% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,79</div><div class="ts">122 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 49 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">58%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">64%</div><div class="ts">dos 75 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">1</div><div class="ts">acessos · 5 faxineiras · pede: Neli e Ana (equipe)</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,78 · comunicação 4,85 · check-in 4,80 · localização 4,91 · valor 4,74. Faltam cerca de <b>60</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>15</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Bom volume: 152 avaliações desde 1º/10</li><li>Já conhece o envio em massa: 75 pedidos em 90 dias, 64% deles em lote</li><li>Equipe pedindo avaliação (Neli e Ana); 22% das saídas em setembro</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,75, abaixo do piso</li><li>Itens faltando e velhos (panelas), equipamentos sem funcionar (chuveiros, ar-condicionado, cervejeira)</li><li>Pedidos zerados em outubro e na última semana (0 de 49 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Retomar a rotina de setembro, que já funcionava</li><li>Inventário de enxoval e utensílios nos imóveis citados</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>São cerca de 59 avaliações 5 estrelas seguidas para chegar a 4,82</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h290">Oi, Neli! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota desde 1º de outubro está em 4,75. Nos comentários aparecem utensílios velhos ou faltando e equipamentos sem funcionar (chuveiros, ar-condicionado). Os pedidos de avaliação, que em setembro chegaram a 22% das saídas, pararam em outubro.
+
+Onde vocês podem nos ajudar: retomar os pedidos pelo envio em massa (como em setembro) e fazer um inventário de utensílios e uma revisão de chuveiros e ar-condicionado.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h290">Copiar mensagem</button></details>
+</article><article id="h139" class="fr" data-foco="nota" data-grupo="premium">
+<div class="cab"><div><h3>Wolnei Roberto Ramos</h3><div class="sub">ITP-002-CEN · Grande · 72 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,76</div><div class="ts">217 avaliações · 82% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,76</div><div class="ts">165 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 73 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">50%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">—</div><div class="ts">nenhum pedido em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">1</div><div class="ts">acessos · 2 faxineiras · pede: ninguém</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,75 · comunicação 4,88 · check-in 4,87 · localização 4,89 · valor 4,77. Faltam cerca de <b>73</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>22</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Ótimo volume: 217 avaliações desde 1º/10, cerca de 3 por imóvel, o maior volume proporcional do grupo</li><li>Comunicação (4,88) e check-in (4,87) bem avaliados</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,76, abaixo do piso de 4,80</li><li>Limpeza (4,75) é a subnota mais baixa; aparecem baratas, cobertores com pó e enxoval</li><li>Equipe pequena no Sapron: 1 acesso e 2 faxineiras cadastradas para 72 imóveis</li><li>Nenhum pedido de avaliação em 90 dias</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>O volume de avaliações já é alto, então cada melhora na limpeza aparece rápido na nota</li><li>Dedetização preventiva e troca de cobertores e enxoval nos imóveis com mais reclamação (FFS e IFT)</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>São necessárias cerca de 72 avaliações 5 estrelas seguidas para chegar a 4,82</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h139">Oi, Wolnei! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: vocês têm um ótimo volume de avaliações (217 desde 1º de outubro), mas a nota está em 4,76. O ponto que mais pesa é a limpeza: nos comentários aparecem baratas, cobertores com pó e enxoval.
+
+Onde vocês podem nos ajudar: focar na limpeza: checklist de vistoria antes de cada entrada, dedetização e troca de enxoval e cobertores nos imóveis que mais aparecem nos comentários.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h139">Copiar mensagem</button></details>
+</article><article id="h165" class="fr" data-foco="ambos" data-grupo="premium">
+<div class="cab"><div><h3>Roberta de Freitas Costa</h3><div class="sub">SSA-001-ITP · Grande · 86 imóveis</div></div>
+<div class="tags"><span class="tag f-amb">Nota + avaliações</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,78</div><div class="ts">195 avaliações · 85% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,77</div><div class="ts">145 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 102 saídas · outubro: 6%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">49%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">47%</div><div class="ts">dos 118 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">3</div><div class="ts">acessos · 8 faxineiras · pede: Roberta e Thays (equipe)</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,88 · comunicação 4,78 · check-in 4,85 · localização 4,87 · valor 4,72. Faltam cerca de <b>44</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>31</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Bom volume: 195 avaliações desde 1º/10</li><li>Limpeza bem avaliada (4,88)</li><li>Tem equipe e usa o envio em massa: 118 pedidos em 90 dias (Roberta e Thays)</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,78, abaixo do piso</li><li>Itens básicos faltando (pano de prato, pano de chão), ar-condicionado com defeito e janela que não abre</li><li>Comunicação (4,78) e valor (4,72) abaixo do grupo</li><li>Pedidos caíram de 16% em setembro para 0% na última semana (0 de 102 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Resolver os itens faltando é rápido e barato</li><li>Retomar os pedidos com a Thays como responsável</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>São cerca de 43 avaliações 5 estrelas para chegar a 4,82</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h165">Oi, Roberta! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota desde 1º de outubro está em 4,78. Os comentários falam de itens básicos faltando (pano de prato, pano de chão) e ar-condicionado com defeito sem solução durante a estadia. Os pedidos de avaliação, que em setembro chegaram a 16% das saídas, ficaram zerados na última semana (de 102).
+
+Onde vocês podem nos ajudar: conferir o kit básico de cada imóvel, resolver o ar-condicionado no primeiro chamado e retomar os pedidos de avaliação pelo envio em massa.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h165">Copiar mensagem</button></details>
+</article><article id="h99" class="fr" data-foco="ambos" data-grupo="premium">
+<div class="cab"><div><h3>Camila Moura Lacerda</h3><div class="sub">MCZ-002-CDA · Master · 146 imóveis</div></div>
+<div class="tags"><span class="tag f-amb">Nota + avaliações</span><span class="tag p2">Contato 2º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,80</div><div class="ts">250 avaliações · 88% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,80</div><div class="ts">165 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 209 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">58%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 1 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">5</div><div class="ts">acessos · 1 faxineiras · pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,80 · comunicação 4,82 · check-in 4,90 · localização 4,94 · valor 4,77. Faltam cerca de <b>28</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>63</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Segunda maior operação (146 imóveis), com 250 avaliações desde 1º/10</li><li>Check-in (4,90) e localização (4,94) muito bem avaliados</li><li>5 acessos ativos no Sapron</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,80, no piso e abaixo da meta de 4,82</li><li>Nenhum pedido de avaliação na última semana (0 de 209 saídas) e só 1 em 90 dias</li><li>Wi-fi, manutenção e limpeza na chegada (banheiro, cabelos) aparecem nos comentários baixos, principalmente no NWT</li><li>Só 1 faxineira cadastrada no Sapron</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>É a premium com mais saídas por semana: com 30% de pedidos, seriam mais de 60 avaliações pedidas por semana</li><li>Resolver o wi-fi do NWT tira um motivo recorrente de nota 1 a 3</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Cerca de 28 avaliações 5 estrelas seguidas para chegar a 4,82; qualquer nota baixa nova a deixa abaixo do piso</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h99">Oi, Camila! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está em 4,80, logo abaixo da nossa meta de 4,82, e não houve pedido de avaliação na última semana (de 209 saídas). Nos comentários aparecem wi-fi do NWT, manutenção e limpeza do banheiro na chegada.
+
+Onde vocês podem nos ajudar: começar a pedir avaliação pelo envio em massa do Seazone Host toda semana, conferir o wi-fi do NWT e reforçar a vistoria de limpeza do banheiro antes de cada entrada.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h99">Copiar mensagem</button></details>
+</article><article id="h47" class="fr" data-foco="nota" data-grupo="premium">
+<div class="cab"><div><h3>Katia Leite do Nascimento Emmel</h3><div class="sub">ITP-001-JPM · Master · 123 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p2">Contato 2º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,81</div><div class="ts">216 avaliações · 89% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,76</div><div class="ts">160 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">11%</div><div class="ts">semana: 13 de 122 saídas · outubro: 48%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">42%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">29%</div><div class="ts">dos 520 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">6</div><div class="ts">acessos · 27 faxineiras · pede: Katia, Isabel e Lariane (equipe)</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,93 · comunicação 4,85 · check-in 4,90 · localização 4,93 · valor 4,79. Faltam cerca de <b>13</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>37</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Maior uso do pedido de avaliação no grupo: 520 pedidos em 90 dias e 48% das saídas em outubro</li><li>Equipe estruturada: 6 acessos, 27 faxineiras e 3 pessoas pedindo avaliação (Katia, Isabel e Lariane)</li><li>Limpeza (4,93) e localização (4,93) excelentes</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,81, logo abaixo da meta; nos últimos 30 dias caiu para 4,76</li><li>Anúncio que promete o que não existe (piscina quebrada, &quot;prometido uma coisa e era outra&quot;) e manutenção no MHF</li><li>Pedidos caíram para 11% na última semana (13 de 122 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Corrigir os anúncios do MHF tira um motivo recorrente de nota 1</li><li>Voltar ao ritmo de outubro nos pedidos</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>A queda dos últimos 30 dias, se continuar, tira a franquia da meta</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h47">Oi, Katia! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: vocês são a franquia que mais pede avaliação (48% das saídas em outubro, parabéns!). A nota está em 4,81 e caiu para 4,76 nos últimos 30 dias, principalmente por anúncio diferente do que o hóspede encontra (piscina quebrada no MHF) e manutenção. Na última semana os pedidos também caíram para 11%.
+
+Onde vocês podem nos ajudar: avisar a Seazone sempre que uma área comum (como a piscina) estiver fechada, para atualizar o anúncio, e retomar o ritmo de outubro nos pedidos.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h47">Copiar mensagem</button></details>
+</article><article id="h75" class="fr" data-foco="ambos" data-grupo="premium">
+<div class="cab"><div><h3>Ana Paula Friedrich de Oliveira</h3><div class="sub">PEN-001-CEN · Master · Penha Spot · 170 imóveis</div></div>
+<div class="tags"><span class="tag f-amb">Nota + avaliações</span><span class="tag p2">Contato 2º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,82</div><div class="ts">368 avaliações · 89% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,80</div><div class="ts">265 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 150 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">51%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 1 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">7</div><div class="ts">acessos · 21 faxineiras · pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,81 · comunicação 4,85 · check-in 4,82 · localização 4,87 · valor 4,79. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>45</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Maior operação premium (170 imóveis) e o maior volume de avaliações do grupo: 368 desde 1º/10</li><li>Nota de 4,82 no trimestre, exatamente na meta</li><li>Estrutura grande: 7 acessos ativos no Sapron e 21 faxineiras cadastradas</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Praticamente não pede avaliação: 1 pedido em 90 dias e nenhum na última semana (0 de 150 saídas)</li><li>Comentários baixos se repetem em limpeza, itens faltando e manutenção no Penha Spot (reconhecimento facial, cadastro do condomínio)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Com 150 saídas por semana, pedir avaliação em 30% delas são cerca de 45 pedidos por semana. Pelo envio em massa, isso leva poucos minutos</li><li>Ter uma pessoa da equipe responsável pelos pedidos, como já acontece na Katia (ITP-001)</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>A nota está no limite: algumas notas baixas tiram a franquia da meta, e pelo tamanho ela puxa a média do grupo inteiro</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h75">Oi, Ana Paula! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está em 4,82, exatamente na nossa meta, mas os pedidos de avaliação praticamente não estão sendo feitos (nenhum na última semana, de 150 saídas). Também aparecem comentários sobre limpeza, itens faltando e o acesso do Penha Spot.
+
+Onde vocês podem nos ajudar: pedir avaliação em todas as saídas pelo Seazone Host (o envio em massa resolve a semana de uma vez) e manter um checklist de entrada para itens e limpeza no Penha Spot.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h75">Copiar mensagem</button></details>
+</article><article id="h214" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Sônia Maria Gervásio Sales</h3><div class="sub">FLN-004-CAM · Spot · Lagoa Spot · 40 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,84</div><div class="ts">100 avaliações · 88% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,86</div><div class="ts">83 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 53 saídas · outubro: 1%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">53%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 1 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">—</div><div class="ts">pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,93 · comunicação 4,88 · check-in 4,85 · localização 4,85 · valor 4,86. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>16</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota de 4,84, acima da meta; 4,86 nos últimos 30 dias</li><li>Limpeza (4,93) e valor (4,86) excelentes</li><li>100 avaliações desde 1º/10 em 40 imóveis</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nenhum pedido de avaliação na última semana (0 de 53 saídas) e 1 em 90 dias</li><li>Pontos isolados: itens simples (varal, frigideira), iluminação e ventilação no TIS e no SCO</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Nota alta: cada avaliação nova ajuda a média da Seazone</li><li>Kit básico completo (varal e frigideira) resolve comentários recorrentes</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Sem pedido, o número de avaliações depende só da vontade do hóspede</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h214">Oi, Sônia! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está ótima, 4,84, acima da nossa meta! Onde vocês podem nos ajudar é no número de avaliações: na última semana não houve pedido (de 53 saídas).
+
+Onde vocês podem nos ajudar: pedir avaliação pelo envio em massa toda semana e completar o kit básico (varal e frigideira) nos chalés.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h214">Copiar mensagem</button></details>
+</article><article id="h123" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Ana Lúcia Gasparello Cruz</h3><div class="sub">CWB-001-CEN · Grande · 73 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,85</div><div class="ts">120 avaliações · 90% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,85</div><div class="ts">96 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">20%</div><div class="ts">semana: 17 de 83 saídas · outubro: 41%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">52%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">92%</div><div class="ts">dos 249 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">2</div><div class="ts">acessos · 4 faxineiras · pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,92 · comunicação 4,85 · check-in 4,86 · localização 4,96 · valor 4,79. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>25</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota de 4,85, acima da meta</li><li>Referência no uso da ferramenta: 249 pedidos em 90 dias, 92% pelo envio em massa</li><li>Limpeza (4,92) e localização (4,96) excelentes; 41% das saídas de outubro com pedido</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Pedidos caíram para 20% na última semana (17 de 83 saídas)</li><li>Comunicação (4,85) e check-in aparecem nos comentários (UPP)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Voltar a passar de 30% toda semana, como em outubro</li><li>Pode servir de exemplo para as outras franquias</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Check-in que não dá certo vira nota baixa na hora: vale revisar as instruções do UPP</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h123">Oi, Ana Lúcia! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está ótima, 4,85, e vocês são referência no pedido de avaliação: em outubro, 41% das saídas tiveram pedido! Na última semana caiu para 20% (17 de 83), e queremos entender como manter acima de 30%.
+
+Onde vocês podem nos ajudar: manter o envio em massa toda semana acima de 30% e revisar as instruções de check-in do UPP.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h123">Copiar mensagem</button></details>
+</article><article id="h251" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Agatha de Assis Souza Gloria</h3><div class="sub">GYN-002-SAG · Grande · 92 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,86</div><div class="ts">137 avaliações · 91% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,86</div><div class="ts">95 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">3%</div><div class="ts">semana: 3 de 98 saídas · outubro: 6%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">46%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 39 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">2</div><div class="ts">acessos · 3 faxineiras · pede: Flaviany e Monica (equipe)</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,85 · comunicação 4,93 · check-in 4,91 · localização 4,98 · valor 4,80. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>29</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota de 4,86, acima da meta</li><li>Comunicação (4,93) e localização (4,98) excelentes</li><li>Já tem equipe pedindo avaliação: Flaviany e Monica fizeram 39 pedidos em 90 dias</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Pedidos ainda baixos: 3% na última semana (3 de 98 saídas) e 6% em outubro</li><li>Não usa o envio em massa: os pedidos são feitos um a um</li><li>Taxa de avaliação de 46% em outubro, abaixo da média do grupo</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Com o envio em massa, chegar a 30% (cerca de 30 pedidos por semana) leva minutos</li><li>Nota alta: cada avaliação nova tende a ajudar a média da Seazone</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Pouca avaliação por imóvel (137 para 92 imóveis); comentários isolados de portaria e de internet pesam mais</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h251">Oi, Agatha! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está ótima, 4,86, acima da nossa meta! Onde vocês podem nos ajudar é no número de avaliações: na última semana o pedido foi feito em 3% das saídas (3 de 98).
+
+Onde vocês podem nos ajudar: transformar o pedido de avaliação em rotina semanal pelo envio em massa do Seazone Host, com a Flaviany ou a Monica como responsável.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h251">Copiar mensagem</button></details>
+</article><article id="h22" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Jeferson Luis Fernandes</h3><div class="sub">GPB-001-PDO · Spot · Rosa Spot · 50 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,89</div><div class="ts">75 avaliações · 92% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,92</div><div class="ts">61 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 20 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">43%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">30%</div><div class="ts">dos 10 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">2</div><div class="ts">acessos · 8 faxineiras · pede: Maylla (equipe)</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,88 · comunicação 4,91 · check-in 4,85 · localização 4,84 · valor 4,91. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>6</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota de 4,89, das melhores do grupo; 4,92 nos últimos 30 dias</li><li>Valor (4,91) e comunicação (4,91) excelentes</li><li>Tem equipe: a Maylla já faz pedidos de avaliação</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Pedidos zerados na última semana (0 de 20 saídas) e em outubro</li><li>Taxa de avaliação de 43% em outubro, entre as mais baixas do grupo</li><li>Pontos isolados de mofo na roupa de cama e acesso ao portão no Rosa Spot</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Nota alta: mais avaliações aqui sobem a média da Seazone</li><li>Combinar uma rotina semanal de pedidos com a Maylla</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Poucas avaliações por imóvel (75 para 50 imóveis): uma nota baixa pesa muito</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h22">Oi, Jeferson! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está ótima, 4,89 (4,92 nos últimos 30 dias)! O que queremos aumentar é o número de avaliações: em outubro e na última semana não houve pedido de avaliação.
+
+Onde vocês podem nos ajudar: pedir avaliação em todas as saídas, com a Maylla como responsável pela rotina semanal.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h22">Copiar mensagem</button></details>
+</article><article id="h32" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Vistas Gestão Rural</h3><div class="sub">ANT-001-VDA · Vistas · Vistas de Anitá · 44 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,93</div><div class="ts">44 avaliações · 93% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,94</div><div class="ts">33 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">59%</div><div class="ts">semana: 20 de 34 saídas · outubro: 11%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">60%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">46%</div><div class="ts">dos 83 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">1</div><div class="ts">acessos · 2 faxineiras · pede: a conta da Vistas</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,89 · comunicação 4,91 · check-in 4,80 · localização 4,86 · valor 4,89. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>10</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota de 4,93</li><li>Melhor taxa de pedido da semana no grupo: 59% (20 de 34 saídas), 46% pelo envio em massa</li><li>Comunicação elogiada nos comentários</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Ainda tem pouca avaliação: 44 desde 1º/10, cerca de 1 por imóvel</li><li>Pedido irregular: 0% em setembro, 11% em outubro</li><li>Limpeza e fotos diferentes do chalé em comentários isolados (VST)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Manter o ritmo desta semana todas as semanas</li><li>Conferir as fotos dos chalés citados</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Com pouca avaliação, comentários isolados de limpeza pesam mais</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h32">Oi, pessoal da Vistas! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota está excelente, 4,93, e nesta semana vocês pediram avaliação em 59% das saídas, a melhor taxa do grupo. Queremos transformar isso em rotina, porque em setembro e outubro os pedidos foram bem mais baixos.
+
+Onde vocês podem nos ajudar: manter o pedido acima de 30% toda semana, como nesta, e conferir as fotos dos chalés citados.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h32">Copiar mensagem</button></details>
+</article><article id="h263" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Jhenyffer Paola Ramos da Silva</h3><div class="sub">URU-003-ABR · Spot · Urubici Spot · 38 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,98</div><div class="ts">50 avaliações · 98% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,97</div><div class="ts">38 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 22 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">72%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 1 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">1</div><div class="ts">acessos · 3 faxineiras · pede: a própria franqueada</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,98 · comunicação 4,88 · check-in 4,92 · localização 4,98 · valor 4,92. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>7</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Melhor nota entre as premium: 4,98, com 98% de notas 5</li><li>Taxa de avaliação de 72% em outubro, a maior do grupo</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nenhum pedido de avaliação na última semana (0 de 22 saídas) e 1 em 90 dias</li><li>O pré-check-in chegou poucas horas antes da entrada em um caso (nota 2)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Com essa nota, cada avaliação nova sobe a média da Seazone; pedir em 100% das saídas faz muita diferença</li><li>Enviar o pré-check-in na véspera</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Poucas avaliações (50): uma nota baixa pesa mais</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h263">Oi, Jhenyffer! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: a nota de vocês é a melhor do grupo premium, 4,98! Por isso cada avaliação a mais faz muita diferença para a Seazone, e hoje os pedidos de avaliação praticamente não estão sendo feitos (nenhum na última semana).
+
+Onde vocês podem nos ajudar: pedir avaliação em todas as saídas e enviar o pré-check-in no dia anterior.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h263">Copiar mensagem</button></details>
+</article><article id="h309" class="fr" data-foco="volume" data-grupo="premium">
+<div class="cab"><div><h3>Mariana de Godoy Umpierre</h3><div class="sub">GPB-005-PDO · Spot · Rosa Sul Spot · 10 imóveis</div></div>
+<div class="tags"><span class="tag f-vol">Aumentar avaliações</span><span class="tag p3">Contato 3º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">5,00</div><div class="ts">5 avaliações · 100% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">5,00</div><div class="ts">5 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 2 saídas · outubro: —%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">—</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">—</div><div class="ts">nenhum pedido em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">—</div><div class="ts">pede: ninguém</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 5,00 · comunicação 5,00 · check-in 5,00 · localização 5,00 · valor 4,80. Já está na meta de 4,82. Pedido de 30% das saídas da semana = <b>1</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Nota 5,0 nas 5 avaliações desde 1º/10</li><li>Operação pequena (10 imóveis no Rosa Sul Spot), fácil de padronizar desde o começo</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Ainda não pediu avaliação (0 pedidos)</li><li>Poucas saídas até agora (2 na última semana)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Começar já com o pedido de avaliação como parte do check-out</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Com 5 avaliações, uma nota baixa derruba bastante a média</li></ul></div>
+</div>
+<details class="msg"><summary>Mensagem para a franquia</summary><pre id="m-h309">Oi, Mariana! Tudo bem?
+
+Aqui é a Victoria, da área de Qualidade de Operação, do Backoffice 😊
+
+Estamos acompanhando de perto as avaliações do Airbnb das franquias premium. Hoje a nota da Seazone no Airbnb está em 4,78 e o nosso objetivo é chegar a 4,82. Como vocês são uma das franquias que mais pesam nessa nota, a ajuda de vocês faz muita diferença.
+
+Olhando os números de vocês no Airbnb: as avaliações estão perfeitas, 5,0! Como a operação está começando, queremos combinar desde já o pedido de avaliação em todas as saídas, que ainda não está sendo feito.
+
+Onde vocês podem nos ajudar: pedir avaliação em todas as saídas desde já, como parte do check-out.
+
+Queremos agendar uma conversa de 30 minutos para falarmos sobre as notas, os pedidos de avaliação e qualquer outro problema que vocês estejam enfrentando na operação, para entender como podemos apoiar. Qual dia e horário ficam melhores para vocês nesta semana ou na próxima?</pre><button class="cp" data-alvo="m-h309">Copiar mensagem</button></details>
+</article>
+</section>
+
+<section id="seazone"><h2>Franquia Seazone (operação própria)</h2>
+<p class="lead">Jurerê Beach Village, Il Campanário e IAM. Não recebem mensagem: o diagnóstico serve para o alinhamento interno.</p>
+<article id="s_JBV" class="fr" data-foco="nota" data-grupo="seazone">
+<div class="cab"><div><h3>Jurerê Beach Village</h3><div class="sub">- · Franquia Seazone · 39 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,33</div><div class="ts">105 avaliações · 68% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,41</div><div class="ts">70 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 73 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">39%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">—</div><div class="ts">nenhum pedido em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">—</div><div class="ts">pede: ninguém</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,78 · comunicação 4,56 · check-in 4,67 · localização 4,88 · valor 4,30. Faltam cerca de <b>286</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>22</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Localização (4,88) e limpeza (4,78) razoáveis</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,33, a mais baixa da página</li><li>Obras no resort: piscina, jacuzzi, academia e sauna indisponíveis sem aviso prévio ao hóspede</li><li>Barulho de obra e valor (4,30)</li><li>Nenhum pedido de avaliação (0 de 73 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Avisar antes da chegada e atualizar o anúncio enquanto houver obra</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Hóspedes saindo antes e pedindo reembolso</li></ul></div>
+</div>
+<p class="int">Operação própria: diagnóstico só para alinhamento interno, sem mensagem para franquia.</p>
+</article><article id="s_ILC" class="fr" data-foco="nota" data-grupo="seazone">
+<div class="cab"><div><h3>Il Campanário</h3><div class="sub">- · Franquia Seazone · 55 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p2">Contato 2º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,70</div><div class="ts">57 avaliações · 84% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,82</div><div class="ts">38 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 75 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">34%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">—</div><div class="ts">nenhum pedido em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">—</div><div class="ts">pede: ninguém</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,77 · comunicação 4,77 · check-in 4,82 · localização 4,95 · valor 4,63. Faltam cerca de <b>39</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>22</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Últimos 30 dias melhores (4,82)</li><li>Localização excelente (4,95)</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,70 desde 1º/10</li><li>Estrutura antiga: mofo e banheiro (mesmo comentário em vários quartos)</li><li>Nenhum pedido de avaliação (0 de 75 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Começar os pedidos agora, aproveitando que a nota do mês melhorou</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Comentários sobre estrutura não se resolvem com a operação, dependem de reforma</li></ul></div>
+</div>
+<p class="int">Operação própria: diagnóstico só para alinhamento interno, sem mensagem para franquia.</p>
+</article><article id="s_252" class="fr" data-foco="nota" data-grupo="seazone">
+<div class="cab"><div><h3>IAM Consultoria</h3><div class="sub">BSB-003-ASN · Franquia Seazone · 70 imóveis</div></div>
+<div class="tags"><span class="tag f-nota">Subir a nota</span><span class="tag p1">Contato 1º</span></div></div>
+<div class="tiles"><div class="t"><div class="tl">Nota desde 1º/10</div><div class="tv">4,54</div><div class="ts">128 avaliações · 75% notas 5</div></div><div class="t"><div class="tl">Últimos 30 dias</div><div class="tv">4,59</div><div class="ts">87 avaliações</div></div><div class="t"><div class="tl">Pedido de avaliação</div><div class="tv">0%</div><div class="ts">semana: 0 de 59 saídas · outubro: 0%</div></div><div class="t"><div class="tl">Taxa de avaliação</div><div class="tv">56%</div><div class="ts">das saídas Airbnb de outubro viraram avaliação</div></div><div class="t"><div class="tl">Envio em massa</div><div class="tv">0%</div><div class="ts">dos 1 pedidos em 90 dias</div></div><div class="t"><div class="tl">Equipe no Sapron</div><div class="tv">1</div><div class="ts">acessos · 9 faxineiras · pede: a própria conta</div></div></div>
+<p class="mini">Subnotas desde 1º/10: limpeza 4,64 · comunicação 4,63 · check-in 4,71 · localização 4,72 · valor 4,45. Faltam cerca de <b>200</b> avaliações 5 estrelas seguidas para chegar a 4,82. Pedido de 30% das saídas da semana = <b>18</b> pedidos por semana.</p>
+<div class="swot">
+<div class="q qf"><h4>Forças</h4><ul><li>Bom volume: 128 avaliações desde 1º/10</li></ul></div>
+<div class="q qw"><h4>Fraquezas</h4><ul><li>Nota de 4,54</li><li>Valor (4,45), limpeza (4,64) e comunicação (4,63) baixos</li><li>Toalhas cobradas sem estar no anúncio, demora na entrada e máquina de lavar e secar com defeito</li><li>Nenhum pedido de avaliação (0 de 59 saídas)</li></ul></div>
+<div class="q qo"><h4>Oportunidades</h4><ul><li>Deixar claro no anúncio as taxas do condomínio (toalhas)</li></ul></div>
+<div class="q qa"><h4>Ameaças</h4><ul><li>Comentários sobre cobrança extra derrubam a categoria &quot;valor&quot;</li></ul></div>
+</div>
+<p class="int">Operação própria: diagnóstico só para alinhamento interno, sem mensagem para franquia.</p>
+</article>
+</section>
+
+<section id="regua"><h2>Como ler os números</h2>
+<ul class="lead">
+<li><b>Nota desde 1º/10</b>: média das avaliações do Airbnb que entram no cálculo, pela data da avaliação (mesma regra do monitor e dos KPIs 549 e 550).</li>
+<li><b>Pedido de avaliação</b>: saídas de 26/10 a 01/11 com pedido enviado pelo Seazone Host (a franquia tem 10 dias para pedir). Outubro: todas as saídas do mês até 01/11.</li>
+<li><b>Taxa de avaliação</b>: quantas saídas pelo Airbnb em outubro viraram avaliação.</li>
+<li><b>Envio em massa</b>: parte dos pedidos dos últimos 90 dias feita em lote (3 ou mais pedidos no mesmo minuto pela mesma pessoa). É uma estimativa: o Sapron não marca de qual tela veio o pedido.</li>
+<li><b>Equipe no Sapron</b>: acessos ativos ligados à conta da franquia e faxineiras ativas cadastradas, e quem fez os pedidos de avaliação nos últimos 90 dias. Equipe que não usa o Sapron não aparece aqui.</li>
+<li><b>Faltam X avaliações 5 estrelas</b>: quantas notas 5 seguidas, sem nenhuma nota menor, levariam a franquia a 4,82.</li>
+</ul></section>
+<footer>Gerado em 11/11/2026 a partir do monitor (Nekt e Sapron). Os números das mensagens são de 11/11; conferir no monitor antes de enviar.</footer>
+</main>
+<script>
+document.querySelectorAll('.cp').forEach(b=>b.addEventListener('click',()=>{
+ const t=document.getElementById(b.dataset.alvo).innerText;
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copiada ✓';setTimeout(()=>b.textContent='Copiar mensagem',1800)})
+ .catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.alvo));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionada: Ctrl+C'});
+}));
+document.querySelectorAll('.filtros button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.filtros button').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('#franquias .fr').forEach(a=>a.style.display=(b.dataset.f==='todas'||a.dataset.foco===b.dataset.f)?'':'none');
+}));
+</script></body></html>
